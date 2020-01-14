@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text관련 태그</title>
+</head>
+<body>
+	<!-- h1~h6태그: 제목 표시해준다(h1이 가장 큼, h6이 가장 작음.-->
+ 	<h1>Hello 똥선</h1>
+ 	<h2>Hello 똥선</h2>
+ 	<h3>Hello 똥선</h3>
+ 	<h4>Hello 똥선</h4>
+ 	<h5>Hello 똥선</h5>
+ 	<h6>Hello 똥선</h6>
+	
+	<!-- p태그: 문단(단락) -->
+	<p> 첫번째 단락</p>
+	<p> 두번째 단락</p>
+	<p> 세번째 단락</p>
+
+<!-- br 태그: 한줄 개행 , 이놈은 end태그가 없다.-->
+	<p>
+		1.e동선<br>
+		2.똥선<br>
+		3.도비<br>
+		4.골덴<br>
+		5.오이변
+	</p>
+    <hr>
+	<!-- hr 태구: 수평선(end 태그 x) -->
+	<!-- blockquote: 인용문 넣기 -->
+	<blockquote>
+		도비는 왜 동선이를 닮았을까요<br>
+		동선이를 닮은 사람이 많아요<br>
+		아닙니다 닮은 사람이 아닙니다...요정
+	</blockquote>
+	
+	<!-- HTML은 공백과 한줄개행을 인식하지 않음! -->
+	<!-- pre: 입력하는 그대로 화면에 표시하기(공백도) -->
+	<P>   동선씨 메롱   </P>
+	<PRE>        동선씨 메롱     </PRE>
+
+	<!-- Strong, b: 글자 진하게 -->
+	<strong>동선</strong><br>
+	<b>진하게 표시할 텍스트</b>
+
+	<!-- em, i: 이탤릭체 -->
+	<em>똥선</em><br>
+	<i>똥똥선</i><br>
+
+	<!-- mark: 형광펜 효과 -->
+	<p> 동선씨 <mark> 메로로로롱롱롱롱</mark></p>
+
+	<!-- span: 줄바꿈 없이 영역 묶기 /구조짤때 많이 사용(많이들 사용한다.) -->
+	<span>오동      통선선</span>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List(목록) 관련 태그 </title>
+</head>
+<body>
+	<!-- ol: 순서가 있는 목록 -->
+	<!-- li: 목록 낱개 1개를 만든다. -->
+	<ol>
+		<li>동선</li>
+		<li>똥선</li>
+		<li>도비</li>
+
+	</ol>
+
+	<ol type="a">
+		<li>동선
+		<li>똥선
+		<li>도비
+
+	</ol>
+
+	<!-- <li>태그들마 나열된 상태에서는 </li>End태그 생략 가능 -->
+
+	<ol type="i">
+		<li>동선</li>
+		<li>똥선</li>
+		<li>도비</li>
+	</ol>
+
+	<!-- ul: 순서가 없는 목록 -->
+	<ul>
+		<li>스타워즈</li>
+		<li>백두산</li>
+		<li>해리포터:도비</li>
+	</ul>
+
+	<!-- dl, dt, dd: 설명 목록 만들기 -->
+	<dl>
+		<dt> 영화: 스타워즈</dt>
+		<dd> 감독: j.j.에이브럼스</dd>
+		<dd> 시간: 141분</dd>
+		
+		<dt> 영화: 해리포토</dt>
+		<dd> 감독: 크리스 콜럼버스</dd>
+		<dd> 시간: 152분</dd>
+
+	</dl>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table(표) 관련 태그</title>
+</head>
+<body>
+	<!-- table, tr, td, th(제목) -->
+
+	<table border="1px">
+		<caption>동선이와 친구들</caption>
+		<thead> <!-- 표의 제목열을 구분하는 태그-->
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>별명</td>
+		</tr>
+		</thead>
+		<tbody>   <!-- 표의 본문 구분하는 태그-->
+		<tr>
+			<td>1</td>
+			<td>동선</td>
+			<td>도비</td>
+		</tr>
+		<tr>
+			<td rowspan="2">2</td>
+			<!-- rowspan 세로로 칸 합치기 -->
+			<td colspan="2">똥선</td>  
+			<!-- colsapn 가로로 칸 합치기 -->
+		</tr>
+		<tr>
+			
+			<td>똥똥선</td>
+			<td>오이번</td>	
+		</tr>
+        </tbody>
+		<tfoot> <!--표의 요약을 구분한느 태그-->
+			<tr>
+				<td colspan="3">칭구가 2명이다</td>
+			</tr>
+			
+		</tfoot>
+	</table>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image(이미지) 관련 태그</title>
+</head>
+<body>
+	<!-- image: 이미지 삽입 -->  
+	<a href="https://www.google.com">
+	 	<img src="C:/Users/504-16/Desktop/Img/2019110402156_0.jpg" alt="물이미지" width="250px" heigth = "419px"> <!--alt 경로를 못찾으면 띄어주는 것-->
+	</a>
+	<br>
+	<!-- a: 하이퍼링크 삽입 , 앵커태그    ,  _black 새로운 창을 띄워준다, 생략하면 _self가 된다..-->
+	<a href="https://www.naver.com" target="_blank">네이버</a>
+	<a href="https://www.google.com" target="_self가">구글</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 값을 입력받는 공간ex) 회원가입, 검색 등등... -->
+	<title>Form(폼: 입력)관련태그</title>
+</head>
+<body>
+	<form method="POST" action="Login" name="frm_login">
+		<!-- 입력받는 태그들  action: 어떠한 작업을 할건지 명령하는 것, 경로를 써준다. method: 어떻게 갈건지를 적는다. -->
+		<label for="inputid">ID</label> <!-- label for을 써주면 id눌렀을때 박스안에 파란테두리 뜬다-->
+		<input type="text" name="" id ="inputid" value="ccw1104"><br>
+		<label for="inputpw">PW</label><input type="password" name="" id="inputpw"><br>
+		<input type="button" name="" value="로그인">
+	</form>
+	
+	<!-- 선택자(selector) -->
+	<!-- id:Unique 식별자 ,중복X 유일하게 하나만 식별 -->
+	<!-- class: 복수개를 선택, 중복 가능  -->
+
+	<!-- fieldsetk, legend: 폼 요소 그룹으로 묶기  테두리 쳐준다.-->
+	<form name="" action="" method=""> 
+		<fieldset>
+			<legend>회원 가입</legend>
+			<label for="memid">아이디</label>
+			<input type="text" name="" id="memid" placeholder="ID를 입력하세요!"><br><!-- placeholder: 아이디 입력창 안에 잔상을 띄어놓은다.-->
+			<label for="mempw">패스워드</label>
+			<input type="text" name="" id="mempw" placeholder="대소문자와 특수문자를 합쳐서 8자이상"><br>
+			<label for="memphone">전화번호(-없이)</label>
+			<input type="text" name="" id="memphone" value="010" maxlength="11">
+		</fieldset>	
+	</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input(입력) 관련 태그</title>
+</head>
+<body>
+	<form name="" action="" method="">
+		<input type="text" name="" placeholder="text" value="약오르지" readonly="readonly" = ><br> 
+		<input type="password" name="" placeholder="password"><br> 
+		<input type="hidden" name="" placeholder="hidden"><br>
+		<input type="search" name="" placeholder="search"><br>
+		<input type="url" name="" placeholder="url"><br>
+		<input type="email" name="" placeholder="email"><br>
+		<input type="tel" name="" placeholder="tel"><br>
+		<input type="number" name="" placeholder="number"><br>
+		<input type="range" name="" placeholder="range"><br>
+
+		<hr>
+		<input type="file" name=""><hr>
+		<label><input type="radio" name="subject">JAVA</label>
+		<label><input type="radio" name="subject">Python</label>
+		<label><input type="radio" name="subject">Oracle</label><br>
+
+		<label><input type="checkbox" name="subject">복숭아</label>
+		<label><input type="checkbox" name="subject">포도</label>
+		<label><input type="checkbox" name="subject">수박</label><br>
+		<hr>
+
+		<input type="button" name="" value="제출">
+		<input type="submit" name="">
+		<input type="reset" name="">
+	</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>extend.html: 스타일 상속</title>
+	<style type="text/css">
+		#ho{
+			color: red;
+			font-size: 45px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="ho">
+		호호호
+		<span>체리링</span> <!-- 스판이 div안으로 들어와서 자식이 됨 (상속)-->
+	</div>
+	
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>font.html</title>
+	<!-- 웹폰트 사용하는 방법 -->
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poor+Story&display=swap');
+		#human{
+			font-size: 45px; /*글자 크기*/
+			font-family: 'Poor Story', cursive;/*글씨체*/
+			font-weight: bold; 
+			/* font-wieght는 글자의 굵기를 지정 숫자는 100-900까지 표현가능 Normal(400),Bold(700)*/
+			font-style: italic;/*이탤릭체*/
+		}
+	</style>
+</head>
+<body>
+	<span id = "human">동선씨동동동동/(O.,.,.,00.,.,.,.O)/</span>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text.html</title>
+	<style type="text/css">
+		#hollywood{
+
+			color: white; /*글자색*/
+			background-color: black;/*배경색*/
+			/* text-decoration
+				- underline: 밑줄
+				- none: 아무것도 안함
+				- line-through: 취소선
+				- overline: 윗줄;  */
+			text-decoration: underline;/*밑줄*/
+
+			/* text-transform
+				-capitalize: 첫글자 대문자 변환
+				-uppercase: 대문자
+				-lowercase 소문자
+				-full-width: 전각문자
+				-none: 아무것도 안함*/
+				
+			text-transform: uppercase;
+		
+		}
+		#movie{
+			color: navy;
+			font-size: 100px;
+			/* text-shadow: 텍스트 그림자 효과;
+			(가로거리, 세로거리, 번짐정도, 색상)
+			*/
+			text-shadow: 5px 5px 3px orangered, 10px 10px 6px mediumseagreen;
+
+			letter-spacing: 0.2em; /*자간*/ 
+		}
+		#actor{
+			width: 500px;
+			border: 1px solid black;
+			font-size: 45px;
+			/* text-align: 정렬
+				start: 현재 텍스트 줄의 시작 위치
+				end: 현재 텍스트 줄의 끝 위치
+				left: 왼쪽 정렬
+				center: 가운데 정렬
+				justify: 양쪽에 맞추어*/
+			text-align: center;
+
+			line-height: 2;/*줄간격(px, 2(글자크기 2배)*/
+		}
+		#aaa{
+			font-size: 45px;
+			width:500px;
+			height: 300px;
+			border:3px dashed skyblue;
+			margin: 10px;
+			text-align: center;
+			line-height: 300px; /*heigt랑 딱 맞게 써주면 한가운데로 온다. 글자가 움직이는게 아니라 박스가 움직인다고 보자*/
+		}
+
+	</style>
+</head>
+<body>
+	<span id="hollywood">Do yo like hollywood?</span><br>
+	<span id="movie">JAVA Programing</span>
+
+	<div id="actor">I Love Python I Love Python I Love Python I Love Python I Love PythonI Love Python I Love Python I Love Python I Love Python</div>
+
+	<div id="aaa">Oracle DBMS</div> 
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list-style-type(ul,ol함꼐 사용)</title>
+	<style type="text/css">
+		ul{
+			/* ul, ol태그 앞의 기호를 제거할때 사용*/
+			list-style-type: none;
+
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>체리</li>
+		<li>체리</li>
+		<li>토미</li>
+	</ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color</title>
+	<style type="text/css">
+		.span1{
+			color:#3c6382;/*16진수(0~9+a,b,c,d,e,f)RGB(앞에 0 두개가 red, 가운데0두개가 green, 마지막 0두개가 blue)값*/
+			font-size: 40px;
+		}
+		.span2{
+			font-size: 40px;
+			/* rgba의 a는 투명도
+				투명도 0~1, 1은 온전하게 출력, 0은 안나오는거*/
+			color: rgba(0,0,0,0.5); 
+
+			opacity: 0.5; /* 투명도만 나타낸다(0~1)*/
+			
+		}
+	</style>
+</head>
+<body>
+	<span class="span1">동선씨 메롱</span>
+	<span class="span2">동선씨 메롱메롱</span>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>background</title>
+	<style type="text/css">
+		.div1{
+			border:1px solid blue;
+			width:800px;
+			height: 800px;
+			background-image: url(C:/Users/504-16/Desktop/Img/14806406278378.jpg);
+			/* repeat: 바둑판식 배열(Default)
+				repeat-x: 가로로만 바둑판식 배열
+				repeat-y: 세로로만 바둑판식 배열
+				no-repeat: 바둑판식 배열 X*/
+			background-repeat: no-repeat;/* 배경바둑판식 배열 X*/
+			
+			/* auto: 기본 배경상즈 그대로 사용
+			 	contain: 태그안에 배경 이미지가 다 들어오도록 확대 또는 축소
+			 	cover: 배경이미지로 요소를 모두 덮도록 이미지를 확대 축소
+			 	200px, 150px : 가로세로 사이즈를 지정
+			 	50%, 50%: 태그의 길이의 몇%로 지정*/
+			background-size: 50%, 50%;
+
+			/*수평위치: left, center, right
+				수직위치: top, center, bottom
+				background-position:수평위치, 수직위치;*/
+			background-position: right, center;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gradation.html</title>
+	<style type="text/css">
+		.div1{
+			width: 1000px;
+			height:1000px;
+			/*방향
+				1. to top  아래에서 위로
+				2. to left
+				3. to right
+				4. to bottom
+
+				각도
+				360도 => 45deg = 45도*/
+			background: linear-gradient(-246.07938369483423deg, rgba(209, 135, 38,1) 14.476562500000007%,rgba(132, 172, 117,1) 48.70703124999999%,rgba(125, 176, 125,1) 51.76627604166666%);	
+		}
+	</style>
+</head>
+<body>
+	<div class="div1"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>stylesheet.html 외부 스타일시트 적용하기</title>
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<div>
+		일찍자고 늦게일너나는 새나라의 어린이 동선
+	</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>youtube.hrml: 비디오(영상)추가 해보기</title>
+</head>
+<body>
+	<iframe width="1280" height="720" src="https://www.youtube.com/embed/tmwTz0E0CC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<video src="C:/Users/504-16/Downloads/Infinite Challenge, Famous Princesses #02, 소문난 칠공주 20130727.mp4"> 
+			
+		</video>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>brother.html:형제 선택자</title>
+	<style type="text/css">
+		
+		/* 연결 선택자
+			1.자식선택자(.grand> .parent)
+			  :부모 바로 다음에오는 하위 클래스;
+			2.자손선택자()
+			  :부모 안에 있는 모든 녀석들을 선택
+			  .grand li = 클래스가 grand인 태그 안에 포함된 태그 중 모든 li>태그를 선택
+
+			3.인접형제선택자(.dd + li)
+			 :나 바로 바음에 형제를 선택(1명의 형제만 선택)
+			4.형제들선택자(.dd ~ li)
+			 : 나 바로 다음에 오는 형제들 선택(다수)
+		*/
+		.grand > .parent{
+			margin: 0; padding: 0;
+			background-color: dodgerblue;
+			color: white;
+		}
+		.grand li{ /* .grand 에있는 모든 태그들*/
+			font-size: 25px;
+			font-weight:bold;
+		}
+		.dd + li{ /* +는 바로 다음에 오는 li태그 형제(레벨이 같으면 형제) */
+			color: orange;
+			font-size: 50px;
+		}
+		.dd ~ li {
+			background-color: mediumseagreen;
+		}
+	</style>
+</head>
+<body>
+	<div class="grand">
+		<ul class="parent">
+			<li>공선</li>
+			<li>농선</li>
+			<li>동선</li>
+			<li class="dd">롱선</li>
+			<li>몽선</li>
+			<li>봉선</li>
+			<li>송선</li>
+			<li>옹선</li>
+		</ul>
+	</div>
+
+	<ul>
+		<li>종선</li>
+		<li>총선</li>
+		<li>홍선</li>
+		<li>콩선</li>
+	</ul>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shakebear.html</title>
+	<style type="text/css">
+		/*transform: 변형(각도, 길이 등) X축, Y축 기준으로 */
+		img:hover{
+			animation: shake 0.5s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes shake{
+			0%{ transform: translate(1px, 1px) rotate(0deg); }
+			10%{transform: translate(-1px, -2px) rotate(-1deg);}
+			20%{transform: translate(-3px, 2px) rotate(1deg);}
+			30%{transform: translate(3px, 2px) rotate(0deg);}
+			40%{transform: translate(1px, -1px) rotate(1deg);}
+			50%{transform: translate(-1px, 2px) rotate(-1deg);}
+			60%{transform: translate(-3px, 1px) rotate(0deg);}
+			70%{transform: translate(3px, 1px) rotate(-1deg);}
+			80%{transform: translate(-1px, -1px) rotate(1deg);}
+			90%{transform: translate(1px, 2px) rotate(0deg);}
+			100%{transform: translate(1px, -2px) rotate(-1deg);}
+		}
+	</style>
+</head>
+<body>
+	<img src="../img/sleeper.png" 
+	width="370px" height="300px">
+</body>
+</html>
+
+]<!DOCTYPE html>
+<html>
+<head>
+	<title>position.html</title>
+	<style type="text/css">
+		/*CSS: Position
+		1.static(정적 위치: 태그 선언해서 생성되는 기본자리) //태그만들면 그대로 나오는것
+		  :지정하지 않은 기본 상태; //포지션을 안주면 스태틱 (디폴트가 스태틱)
+		2.relative
+		  : static 위치를 기준으로 위치를 지정(상대 위치);//나자신의 스태틱 위치를 기준으로 잡는다.
+		  : top, left, right, bottom으로 static 위치에서 상대적으로 위치를 지정;
+		3.absolute
+		  : body 또는 기준을 잡고 위치를 지정(절대 위치);
+		  : static속성을 제외 한 상위의 positoin 속성을 갖고 있는 태그를
+		    기준으로 절대 위치를 잡음, top, left, right, bottom 사용 가능 상위가 static만 있다면
+		    body를 기준으로 잡음;
+		4.fixed
+		  : 스크린을 기준(모니터 사이즈)으로 위치가 고정
+		  :fix(고정위치)화면상 즉 스크린 전체크기에 대한 고정위치를
+		  잡음, 보통 헤더나 푸터 사이드 메뉴 고정시*/
+		  *{margin: 0; padding: 0; }
+		  	
+		 
+		  body * {
+		  	margin: 0: padding: 0; border: solid silver;
+		  	font-size: 25px;
+
+		  }
+		  .imgbox1{
+		  	width: 70px; height: 70px;
+		  	background-image: url(C:/Users/504-16/Desktop/Img/잉어킹.png)
+		  }
+		  .imgbox2{
+		  	width: 140px; height: 140px;
+		  	background-image: url(C:/Users/504-16/Desktop/Img/닥트리오.png)
+		  }
+		  .box1{width: 50px; height: 25px;}
+		  .box2{width: 100px; height: 50px; background-color: yellow;}
+		  .block{display: block;}
+		  .inline{display:inline;}
+		  .hidden{visibility: hidden;}/**위치는 있지만 투명망토를 쓰고 있음**/
+		  .float-r{float:right;}
+		  #area{
+		  	position:absolute;
+		  	width: 500px; height: 400px;
+		  	border: dotted silver;
+		  }
+		  #DDD{opacity: 0.4;}
+		  #EEE{padding: 25px 10px 25px 90px;} /*시계방향으로 읽으면 된다. 탑 라이트 바텀 레프트*/
+		  #FFF{
+		  	position:absolute;
+		  	top: 20px; right: 40px;
+		  	border-style: ridge;
+		  	border-width: 10px;
+		  	/* border-color: black;   
+		  	  boredr: 10px ridge black;*/
+		  }
+		  #GGG{
+		  	position: fixed;
+		  	bottom: 20px;
+		  	right: 40px;
+			box-shadow: 4px 4px 10px 6px orangered;
+		  }
+		  #HHH{
+		  	position: relative;
+		  	top: -50px;
+		  	left: 200px;
+		  	border-radius: 20px; /*보더니까 테두리 관련 // 테두리를 동그랗게 해줄때 사용// 원래 있어아햐는 위치를 기준으로*/
+		  }
+	</style>
+
+</head>
+<body>
+	<div id = "area">
+	<div class="imgbox1 block">AAA</div>		
+	<div class="imgbox1 inline">BBB</div>
+	<div class="imgbox1 inline">CCC</div>
+	<div id="DDD" class="imgbox1 block">DDD</div>
+	<div id="EEE" class="box2 block">EEE</div><!--괄호 다 내꺼-->
+	<div id="FFF" class="imgbox2 block">FFF</div>
+	<div id="GGG" class="imgbox1 block">GGG</div>
+	<div id="HHH" class="imgbox2 block">HHH</div>
+	<div class="imgbox1 bolck float-r">KKK</div>
+	<div class="imgbox1 hidden float-r">MMM</div>
+	<div class="imgbox1 block float-r">NNN</div>
+	
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anmimation.html:애니메이션 효과</title>
+	<style type="text/css">
+		p{
+			font-size: 25px;
+		}
+		span{
+			font-size: 100px;
+			color:orangered;
+			font-weight: bold;
+			/*설정할 애니메이션 이름*/
+			animation-name: twinkle;
+			/*애니메이션의 반복 횟수*/
+			animation-iteration-count: infinite;
+			/*애니메이션의 실행 시간*/
+			animation-duration: 0.1s;
+		}
+		@keyframes twinkle{
+			0%  {opacity: 0;}
+			100%{opacity: 1;}
+
+			/*from{opacity: 0;}
+			to{opacity: 1;}*/
+		}
+	</style>
+</head>
+<body>
+	<p><span>키다리</span> 동선씨???호호호;)</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pokemon.html: 포켓몬스터 카드 도감</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+	<style type="text/css">
+		.card{
+			border:1px solid rgba(0, 0, 0, 0.3);/**/
+			width: 250px;
+			height: 300px;
+			background-color: white;
+			/*box-sizing: border-box; 사이즈 고정 (가로, 세로)
+
+			width: 250px; //content
+			padding: 7px;
+			border: 1px;
+			현재 가로 길이는 
+			content + padding + border
+			250 + 14 + 2 = 266px
+			box - sizing: border - box;를 준 순간 width 250px 고정
+			250px = 234 + 14 + 2 */
+			box-sizing: border-box; 
+			margin: 20px;
+			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+			padding: 7px;
+			display: inline-block;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="card">
+
+	</div>	
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>active.html(상태선택자)</title>
+	<style type="text/css">
+		/* 상태선택자
+		   선택자: link = 방문하지 않은 링크에 스타일 적용
+		   선택자: visited = 방문한 링크에 스타일 적용
+		   선택자: hover= 마우스 커서 올려놓았을때 스타일 적용
+		   선택자: active = 웹 요소를 활성화했을 때 스타일 적용
+		   선택자: focus = 웹 요소에 초점이 맞추어졌을 때 스타일 적용*/
+		   ul{list-style-type: none; /**/
+			  font-size: 25px;
+		   }
+		   a:link, a:visited{ /* 방문했건 안했거 밑줄을 지워버려라*/
+		   	padding: 10px;
+		   	text-decoration: none; 
+		   }
+		   a:hover, a:focus{
+		   	background-color: orangered;
+		   	color: white;
+
+		   }
+		   a:active{
+		   	background-color: mediumseagreen;/*클릭했을때 효과주는 것*/
+		   	color: white;
+		   }
+	</style>
+</head>
+<body>
+	<div class="navi">
+		<ul>
+		<li><a href="#">이용안내</a></li>
+		<li><a href="#">객실소개</a></li>
+		<li><a href="#">예약방법 및 요금</a></li>
+		<li><a href="#">예약하기</a></li>
+		</ul>
+		
+	</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pokemon.html: 포켓몬스터 카드 도감</title>
+	<link rel="stylesheet" type="text/css" href="../common.css">
+	<style type="text/css">
+		.card{
+			border:1px solid rgba(0, 0, 0, 0.3);/**/
+			width: 250px;
+			height: 300px;
+			background-color: white;
+			/*box-sizing: border-box; 사이즈 고정 (가로, 세로)
+
+			width: 250px; //content
+			padding: 7px;
+			border: 1px;
+			현재 가로 길이는 
+			content + padding + border
+			250 + 14 + 2 = 266px
+			box - sizing: border - box;를 준 순간 width 250px 고정
+			250px = 234 + 14 + 2 */
+			box-sizing: border-box; 
+			margin: 20px;
+			box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+			padding: 7px;
+			display: inline-block;
+
+		}
+		.type_info{
+			text-align: right;
+		}
+		.type{
+			width: 50px;
+			height: 20px;
+			color: white; /*글자색*/
+			font-size: 12px;
+			display: inline-block;
+			box-sizing: border-box;
+			text-align: center;
+			border-radius: 10px; /*테두리 둥글게 만들기 */
+
+		}
+		.grass{
+			background-color: #78c850;
+		}
+		.poison{
+			background-color: #a040a0;
+		}
+		.name_info{
+			font-weight: bold;
+			border-bottom: 1.5px solid rgba(0,0,0,0.2);
+			padding: 5px 0;
+		}
+		/*.img_info{
+			text-align: center; 가운데 정렬
+			
+		}*/
+		img.pokemon{
+			margin: 0 auto;/*가운데 정렬이 된다. 마진 0 블락*/
+			display: block;
+		}
+		div.detail_info{
+			margin-bottom: 5px;
+		}
+		table, th, td{
+			border: 1px solid lightgray;
+		}
+		table{
+			width: 225px;
+			margin: 0 auto;
+			background-color: #d4f4fa;
+			box-sizing: border-box;
+			border-collapse: collapse; /*표테두리가 한줄로 바뀐다.*/
+		}
+		th{
+			text-align: left;
+			width: 60px;
+
+		}
+		td{
+			text-align: right;
+		}
+		div.link_info{
+			border-top: 1px solid rgba(0,0,0,0.2);
+			text-align: right;
+			padding-top: 3px
+		}
+		span.like_span{
+			background-image: url('../Img/하트.png'); /*895배경으로 하트를 넣어줌 컨텐츠는 백그라운드 까지 배경영역으로 본다.*/
+			background-repeat: no-repeat;/*백그라운드는 패딩이랑 컨텐츠랑다 합친 영역*/
+			line-height: 18px;
+			padding-left: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="type_info">
+			<span class="type grass">풀</span>
+			<span class="type poison">독</span>
+		</div>
+		<div class="name_info">
+			No.001 이상해씨
+		</div>
+		<div class="img_info">
+			<img src="../Img/이상해씨.png" class="pokemon">
+		</div>
+		<div class="detail_info">
+			<table>
+				<tr>
+					<th>분류</th>
+					<td>씨앗 포켓몬</td>
+				</tr>
+				<tr>
+					<th>키</th>
+					<td>0.7m</td>
+				</tr>
+				<tr>
+					<th>몸무게</th>
+					<td>6.9kg</td>
+				</tr>
+			</table>
+	</div>	
+	<div class="link_info">
+		<span class="like_span">895</span>
+		
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>네이버: 로그인</title>
+	<!-- favicon: 제목줄의 아이콘 -->
+	<link rel="icon" type="image/x-icon" href="../Img/NAVER/naversm.png">
+	<style type="text/css">
+		/* 공통 사항*/
+		@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+		
+		body,ul{
+			background-color: #f5f6f7;
+			font-family: 'Nanum Gothic', sans-serif;
+			margin: 0; padding: 0;
+		}
+		a:link, a:visited{
+			color: inherit;
+			text-decoration: none;
+		}
+		/*a:hover{
+			text-decoration: underline;
+		}*/
+
+		/*header 부분*/
+		div#content_layout{
+			width: 460px;
+			margin: 0 auto;
+		}
+		div#header_div{
+			width: 240px;
+			margin: 62px auto;
+		}
+		div.div_input{
+			background-color: white;
+			border: 1px solid #badada;
+			width: 408px;
+			height: 29px;
+			margin-bottom: 14px;
+			padding: 10px 35px 10px 15px;
+		}
+		span.input_box{
+			display: block;
+			overflow: hidden; /*사이즈를 정해놓고 그 이상 넘어버리면 숨기는것*/
+		}
+		input.input_login{
+			border-width: 0px;
+			width: 408px;
+			padding:7px 0px 6px 0px;
+		}
+		a#btn_login{
+			display: block;/*사이즈 줄수있는데 가로 다 내꺼*/
+			background-color: #1fbc02;
+			color: white;
+			font-size: 22px;
+			width: 460px;
+			height: 59px;
+			text-align: center;/*글자 가운데 정렬*/
+			padding-top: 2px;/*안쪽여백 윗쪽*/
+			line-height: 61px;/*글자가 가운데 정렬된다.//heigt랑 같은값을 주면됨 (패딩 탑2 가 있어서 2를 더해서 준다.)*/
+			text-decoration: none;
+			margin: 30px 0px 13px 0px;/*시계방향으로 상우하좌*/
+		}
+		table{
+			width: 100%;
+		}
+		#state{
+			font-size: 13px;
+			position: relative;
+		}
+		td{
+			height: 26px;
+		}
+		#state > label{
+			background:url('../Img/NAVER/check_off.gif') no-repeat;
+			display: block;
+			height: 26px;
+			line-height: 26px;
+			padding-left: 30px;
+
+		}
+		#state > input{
+			visibility: hidden;
+			position: absolute;
+			right: 1px;
+			width: 22px;
+			height: 22px;
+			margin-top: -11px;
+		}
+
+		#state > input:checked + label{
+			background-image: url('../Img/NAVER/check_on.gif');
+		}
+
+		#secure{
+			text-align: right;
+			font-size: 12px;
+		}
+
+		#ip_ud{
+			color: #747474;
+		}
+		/*#ip_ud:hover{
+			text-decoration: none;
+		}*/
+		#off{
+			display: inline-block;
+			font-weight: bold;
+			width: 22px;
+			text-align: left;
+			color: #747474;
+			cursor:pointer;
+		}
+		.si{
+			color: #d5d5d5;
+		}
+		#login_ud > a{
+			text-decoration: underline;
+			color: #747474;
+		}
+		#secure img{
+			/*수직정렬
+			: display가 inline 또는 inline-block일 때만 사용 가능
+			: baseline, sub, super, middle, top, bottom 등*/
+			vertical-align: bottom;
+
+		}
+		hr{
+			width: 98%;
+			margin: 20px auto;
+			border: thin solid #eaeaea;
+		}
+		div#member{
+			color: #8c8c8c;
+			font-size: 12px;
+			text-align: center;
+		}
+		div#marketing{
+			width: 100%;
+		}
+		img#naver_img{
+			width: 460px;
+			display: block;
+			margin: 47px 0px 15px 0px;
+		}
+		#footer{
+			padding: 15px 0;/*상하 (두개일떄는)*/
+		}
+		#footer > ul{ 
+			margin: 0 auto 9px;
+			text-align: center;
+
+		}
+		#footer * {
+			font-size: 11px;
+			line-height: normal;
+			list-style: none;
+			color: #333;
+		}
+		#footer > ul > li{
+			display: inline;/*인라인:사이즈 조절은 안하는데 내 옆으로 다 붙어라*/
+			padding: 0 5px 0 7px;
+			border-left: 1px solid #dadada;
+		}
+		#footer > ul > li a:hover{
+			color: #1fbc02;
+			text-decoration: underline;
+		}
+		#footer ul li:first-child{/* first-child: 첫번째 자식만*/
+			border-left: 0px!important;/* ! 느낌표 찍으면 가장 높은 레벨이니까 이놈만 먹음*/
+		}
+		#addr_logo{
+			width: 63px;
+			height: 11px;
+		}
+		#address{
+			margin:0 auto;
+			text-align: center;
+		}
+		#address * {
+			font: 9px verdana;
+		}
+		#address a{
+			font-weight: bold;
+		}
+		#address a: hover{
+			color: #1fbc02;
+		}
+	</style>
+</head>
+<body>
+	<div id="content_layout">
+		<header>
+			<div id="header_div">
+				<a href="httms://www.naver.com">
+					<img alt="네이버 로고" src="../Img/NAVER/naver_logo.png">
+				</a>
+				
+			</div>
+		</header>
+		<section>
+			<div class="div_input" id="naver_id">
+				<span class="input_box">
+					<input type="text" placeholder="아이디" class="input_login" id="inputin">
+					
+				</span>
+			</div>
+			<div class="div_input" id="naver_pw">
+				<span class="input_box">
+					<input type="password" placeholder="비밀번호" class="input_login" id="inputpw">
+					
+				</span>
+				
+			</div>
+			<div>
+				<a id="btn_login" href="#">로그인</a>
+			</div>
+			<div>
+				<table>
+					<tr>
+						<td id="state">
+							<input type="checkbox" id="loginck">
+							<label for="loginck" class="label1">
+								&nbsp로그인상태유지
+							</label>
+						</td>
+						<td id="secure">
+							<span id="ip_ud"><a href="#">IP보안</a></span>
+							<span id="off">OFF</span>&nbsp;<!--여백줄때 사용-->
+							<span class="si">|</span>&nbsp;
+							<span id="login_ud"><a href="#">일회용 로그인</a></span>&nbsp;
+							<img src="../Img/NAVER/help.png">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div><hr></div>
+			<div id="member">
+				<a href="#">아이디 찾기</a>&nbsp;<span class="si"> | </span>&nbsp;
+				<a href="#">비밀번호 찾기</a>&nbsp;<span class="si"> | </span>&nbsp;
+				<a href="#">회원가입</a>
+				
+			</div>
+		</section>
+		<aside>
+			<div id="marketing">
+				<img src="../Img/NAVER/naver_img.JPG" id="naver_img">				
+			</div>
+		</aside>
+		<footer>
+			<div id="footer">
+				<ul>
+					<li><a href="#">이용약관</a></li>
+					<li><strong><a href="#">개인정보처리방침</a></strong></li>
+					<li><a href="#">책임의 한계와 법적고지</a></li>
+					<li><a href="#">회원정보 고객센터</a></li>
+				</ul>
+			
+				<div id="address">
+					<span>
+						<a href="httms://www.naver.com">
+						<img id="addr_logo" src="../Img/NAVER/naver_logo.png">
+						</a>
+					</span>
+					<span>Copyright</span>
+					<span>@</span>
+					<span><strong><a href="#">NAVER Corp.</a></strong></span>
+					<span>All Rights Reserved.</span>
+				
+				</div>
+
+			</div>
+		</footer>
+		
+	</div>
+</body>
+</html>
