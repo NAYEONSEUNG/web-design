@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>yellow:알약</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<style type="text/css">
+		div.header_wrap{
+			width: 100%;
+			background-color: white;
+			box-shadow: 0 0 1px 1px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 20, .1);
+			z-index: 999;/*숫자가 크면 클수록 무조건 맨 앞에 오는놈*/
+		}
+		div.header_content{
+			width: 1400px;
+			margin: 0 auto;
+			height: 65px;
+			box-sizing: border-box;
+			border-left: 1px solid red;
+			border-right: 1px solid red;
+			/*background-color: blue;    내용물이 들어올 공간*/
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header_content_logo{background-color: red;}
+		.header_content_search{background-color: blue;}
+		.header_content_nav{background-color: green;}
+		.header_content_member{background-color: yellow;}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header_wrap">
+			<div class="header_content">
+				<div class="header_content_logo">
+					<img src="">
+					<span>노란알약</span>
+				</div>
+				<div class="header_content_search">물음표</div>
+				<div class="header_content_nav">
+					<a href="#">비타민</a>
+					<a href="#">간건강</a>
+					<a href="#">눈건강</a>
+					
+				</div>
+				<div class="header_content_member">
+					<a href="#">로그인</a>
+					<a href="#">회원가입</a>
+				</div>
+			</div>
+		</div>
+	</header>
+</body>
+</html>
