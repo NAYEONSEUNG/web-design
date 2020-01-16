@@ -1,5 +1,7 @@
 /*구글웹폰트*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+/*공통사항*/
+*{box-sizing: border-box;}
 body{
 	background-color: #8ecc9;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -24,3 +26,43 @@ body{
 		.bg-color1{background-color: #3885ca;}
 		.bg-color2{background-color: #eba444;}
 		.bg-color3{background-color: #d1d1dd;}
+
+/*버튼들*/
+button.btn{
+			display: inline-block;
+			font-weight: 600;
+			text-align:center;
+			font-size: 15px; 
+			border-radius: 5px;
+			cursor: pointer;
+			padding: 11px 12px;
+			border:1px solid transparent;
+			/*background-color: white;*/
+		}
+		button.btn-basic{
+			border: 1px solid #686f7a;
+			background-color: white;
+			color: #686f7a;
+		}
+		button.btn-basic:hover{
+			color: #2f3138;
+			border-color: #2f3138;
+		}
+		button.btn-primary{
+			
+			background-color: #E8D030;
+			color: white;
+		}
+		button.btn-primary:hover{
+			background-color: #E88C30;
+			border-color: transparent;
+		}
+		button.btn-support{
+			
+			background-color: #E8D030;
+			color: white;
+		}
+		button.btn-support:hover{
+			background-color: #E88C30;
+			border-color: transparent;
+		}
