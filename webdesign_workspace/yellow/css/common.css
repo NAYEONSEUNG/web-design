@@ -66,3 +66,16 @@ button.btn{
 			background-color: #E88C30;
 			border-color: transparent;
 		}
+
+/*텍스트에 밑줄 그어지는 css효과*/
+.magicline:after{
+	content: '';/*내용부 없다.*/
+	display: block;/*가로 다 내꺼*/
+	width: 0;
+	height: 2.5px;
+	background-color: #506763;
+	transition: width .3s;
+	}
+.magicline:hover:after{
+	width: 100%;
+	}

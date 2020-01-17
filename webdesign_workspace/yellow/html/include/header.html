@@ -17,8 +17,8 @@
 			margin: 0 auto;
 			height: 90px;
 			box-sizing: border-box;
-			border-left: 1px solid red;
-			border-right: 1px solid red;
+			/*border-left: 1px solid red;
+			border-right: 1px solid red;*/
 			/*background-color: blue;    내용물이 들어올 공간*/
 			display: flex;
 			justify-content: space-between;
@@ -55,7 +55,17 @@
 			background-color: #FCBE32;
 			color: white;
 		}
-		.header_content_nav{background-color: green;}
+		.header_content_nav{ /*파는 제품목록이 가로로 붙게하는 방법*/
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 280px;
+		}
+		.header_content_nav > div {/*w제품목록 빨간줄로 나누기*/
+			/* border: 1px solid red; */
+			padding: 10px 0;
+
+		}
 		.header_content_member{
 			/*width: 160px;*/ /*주석처리하면 쇼핑카트 들어가도 로그인창이 안깨진다.*/
 			display: flex;/*가로로 붙음 로그인과 회원가입이  플렉스는 디폴트가 가로*/
@@ -66,11 +76,11 @@
 		.header_content_member > div{
 			padding: 10px 0px 10px 3px;
 		}
-		.header_content_member_mypage{
+		.header_content_dropdown_group{
 			position: relative;
 		}
 	
-		.header_content_member_mypage > a{
+		.header_content_dropdown_group > a{
 			padding: 12px 15px;
 			font-weight: 400;
 			border: 1px solid transparent;
@@ -81,12 +91,12 @@
 			display: inline-block;
 		}
 	
-		.header_content_member_first:hover > div > a,/*호버 한번에 두개 주는법*/
+		.header_content_dropdown_wrap:hover > div > a,/*호버 한번에 두개 주는법*/
 		.header_content_member_cart:hover > a {
 			background-color: rgba(20,23,28,.05);
 			border-color: rgba(20,23,28,.05);
 		}
-		.header_content_member_first:hover .header_dropdown{
+		.header_content_dropdown_wrap:hover .header_dropdown{
 			display: block;
 		}
 		.header_content_member_cart > a{
@@ -153,6 +163,7 @@
 			border-color: transparent transparent #fff transparent;
 			z-index: 99;
 		}
+		
 	</style>
 </head>
 <body>
@@ -175,14 +186,69 @@
 					</form>
 			    </div>
 				<div class="header_content_nav">
-					<a href="#">비타민</a>
-					<a href="#">간건강</a>
-					<a href="#">눈건강</a>
-					
+									
+				
+				
+				<div class="header_content_dropdown_wrap">
+						<div class="header_content_dropdown_group">
+						  <a href="#">비타민</a>
+						  <div class="header_dropdown">
+						  	<div class="arrow"></div>
+						    <ul class="header_dropdown_menu">
+							   <li><a href="#">효모비타민</a></li>
+						       <li><a href="#">비타민D</a></li>
+							   <li><a href="#">마그네슘B6</a></li>
+							   <li><a href="#">칼맥</a></li>							
+						    </ul>
+						  </div>
+						</div>
+					</div>
+
+				<div class="header_content_dropdown_wrap">
+					<div class="header_content_dropdown_group">
+					  <a href="#">눈</a>
+					  <div class="header_dropdown">
+					  	<div class="arrow"></div>
+					    <ul class="header_dropdown_menu">
+						   <li><a href="#">루테인</a></li>
+					       <li><a href="#">칸스토리</a></li>	
+					       <li><a href="#">베타카로틴</a></li>													
+					    </ul>
+					  </div>
+					</div>
 				</div>
+				
+				<div class="header_content_dropdown_wrap">
+					<div class="header_content_dropdown_group">
+					  <a href="#">간</a>
+					  <div class="header_dropdown">
+					  	<div class="arrow"></div>
+					    <ul class="header_dropdown_menu">
+						   <li><a href="#">밀크씨슬</a></li>
+					       <li><a href="#">마칸</a></li>													
+					    </ul>
+					  </div>
+					</div>
+				</div>
+
+				<div class="header_content_dropdown_wrap">
+				    <div class="header_content_dropdown_group">
+				 	    <a href="#" class="magicline">커뮤니티</a>					
+					    <div class="header_dropdown">
+						    <div class="arrow"></div>
+						    <ul class="header_dropdown_menu">
+							   <li><a href="#">구매후기</a></li>
+						       <li><a href="#">자유게시판</a></li>							   
+							   <li><a href="#">질문게시판</a></li>							
+						    </ul>
+				        </div>
+				    </div>
+				</div>
+				</div>
+				
 				<div class="header_content_member">
-					<div class="header_content_member_first">
-						<div class="header_content_member_mypage">
+					<div class="header_content_dropdown_wrap">
+						<div class="header_content_dropdown_group">
 						  <a href="#">마이페이지</a>
 						  <div class="header_dropdown">
 						  	<div class="arrow"></div>
