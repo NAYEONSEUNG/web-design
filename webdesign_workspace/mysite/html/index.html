@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>연승</title>
+	<script src="https://kit.fontawesome.com/e272fd87da.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css/common.css"><!--상대주소니까 복사하지말고 직접치자-->
+	<link rel="stylesheet" type="text/css" href="../css/effect.css">
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+		.wrap{
+			/*border: 1px solid black;*/
+			max-width: 1400px;
+			display: flex;
+			justify-content: space-around;
+			box-sizing: border-box;
+			padding: 25px;
+			margin: 0 auto;
+		}
+
+		/*사이드 내용*/
+		.side_wrap{
+		/*	border: 1px solid red;*/
+			width: 450px;
+			/*height: 1000px;*/
+			margin-right: 25px;
+		}
+		.side_picture{
+			background-image: url("../img/미니언즈_1.jpg");
+			background-repeat: no-repeat;
+			height: 293px;
+			background-position: center center;
+			width: 100%;
+			
+		}
+		.side_intro_group{
+			padding: 15px;
+		}
+		.name{
+			font-size: 30px;
+			font-family: 'Bree Serif', serif;
+		}
+		.intro{
+			font-size: 15px;
+			line-height: 22px;
+		}
+		.common_panel{
+			border-radius: 2px;
+			background-color: white;
+
+		}
+		.side_personal{
+			border-top: 1px solid #eee;
+			padding: 0 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 165px;
+			/*height: 50px;*/ /*이거 주석처리하면 자동으로 내용물 만큼 커지고 작아지고 한다.*/
+		}
+		.side_personal_group{	
+			padding: 0 15px;
+
+		}
+		.side_personal i{
+			color:#526666; /*아이콘(i)는 텍스트로 인식을 한다.*/
+			width:20px; /*아이콘들을 반듯하게 정렬*/
+		}
+		.side_sns{
+			border-top: 1px solid #eee;
+			padding: 15px 0;
+			/*height: 100px;*/
+		}
+		.common_panel{
+			margin-bottom: 25px;
+			/*padding: 15px;*/
+		}
+
+        .menu_title{
+			background-color: #526666;
+			color: white;
+			font-weight: bold;
+			padding: 8px 15px;
+			font-size: 18px;
+			border-top-left-radius: 2px;
+			border-top-right-radius: 2px;
+			display: flex;
+			align-items: center;
+		}
+		.menu_title i {
+			width: 20px;
+		}
+
+		/*소개 내용*/
+		.content_wrap{
+		/*	border: 1px solid blue;*/
+			width: 850px;
+		/*	height: 1000px;*/
+		}
+		.content_padding{
+			padding: 15px;
+		}
+		.bar_wrap{
+			margin-bottom: 20px;			
+		}
+		.bar_border{
+			margin-top: 8px;
+			width:815px;
+			height: 25px;
+			background-color: #f1f1f1;
+			/*border: 1px solid #03a6ff;*/
+			overflow: hidden;
+			border-radius: 16px;
+		}
+		.bar_fill{
+			width: 0;
+			height: 25px;
+			background-color: #CAF0D1;
+			border-radius: 16px;
+			padding: 0 15px;
+			text-align: center;
+			line-height: 25px;
+			font-weight: bold;
+			font-size: 13px;
+		}
+		.skill_title{
+			padding: 0px 0px 8px 8px;
+		}
+		.content_padding > .bar_wrap:last-child{
+			margin: 0;
+		}
+
+
+		/*sns 버튼 애니메이션 css효과*/
+
+		div.middle{
+			display: flex;
+			justify-content: center;
+			align-items: center; /*한건일때만 가운데 정렬이 된다. */
+		}
+		.content_padding > table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		table,th,td{
+			border: 1px solid #2f3138;
+			
+		}
+		th,td{
+			padding: 5px;
+		}
+		th{background-color:#71A297; color: white; }
+		.edu_table tr:nth-child(even){/*짝수번에 색깔들어감*/
+			background-color: #f1f1f1;
+		}
+		.edu_table tr td:first-child, .edu_table tr td:last-child  {
+			text-align: center;
+		}
+		.edu_table tr:hover{
+			background-color: #ccc;
+		}
+		.download_wrap{
+			width: 100%;
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 25px;
+		}
+		.download_wrap div a{
+			padding: 8px 20px;
+			color: white;
+			border-radius: 5px;
+			background-color: #a6664b;
+		}
+		.download_wrap div a:hover{
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+		}
+		.fix_btn{
+			position: fixed;
+			right: 50px;			
+			color: white;
+			height: 70px;
+			width: 70px;			
+			border-radius:50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 25px;
+			cursor: pointer;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+		}
+		.fix_btn > i {
+			transition: transform .3s;			
+		}
+		.fix_btn:hover > i{
+			transform: scale(2);
+		} 
+		.conn_btn, .close_btn{
+			bottom: 30px;
+			background-color: #c03546;
+
+		}
+		.top_btn{
+			bottom: 115px;
+			background-color: #414d41;
+		}
+		.msg_wrap{
+			position: absolute;
+			bottom: 30px;
+			right: 150px;
+			background-color: white;
+			/*padding: 15px;*/
+			border-radius: 5px;
+			border: 1px solid #2f3138;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+
+		}
+		.note_wrap{
+			padding: 15px;
+			color: #2f3138;
+			font-size: 15px;
+			width: 700px;
+
+		}
+		.send_info{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}	
+		.note_wrap > div{
+			margin-bottom:8px;
+		}
+		.note_wrap input{
+			font-size: 20px;
+			color: #2f3138;
+			outline: none;
+			height: 35px;
+			padding: 7px 0 6px;
+			border: 0;
+			width: 100%;
+		}
+		.send_name, .send_email, .send_msg{
+			border: 1px solid #2f3138;
+			padding: 10px 35px 10px 15px;
+			width: 100%;
+		}
+		.area{ width: 20px; }
+		.send_btn{
+			display: flex;
+			justify-content: space-between;/*양옆 사이드로 붙게한다.*/
+			align-items: center;
+		}
+		.send_btn > a{
+			width: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 12px 15px;
+			border: 1px solid #526666;
+			border-radius: 5px;
+		}
+		.err_msg{
+			color: red;
+			font-size: 20px;		
+			visibility: hidden;/*에러메시지 사라진건 아니고 숨어있는거다*/
+		}
+		.modal_wrap{
+			position: fixed;
+			z-index: 100;
+			background-color: rgba(0,0,0,0.4);
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<div class="top_btn fix_btn"><i class="fas fa-arrow-alt-circle-up"></i></div>
+	<div class="conn_btn fix_btn"><i class="fas fa-envelope"></i></div>	
+	<div class="modal_wrap">
+		<div class="close_btn fix_btn"><i class="fas fa-times"></i></div>
+		<div class="msg_wrap">
+
+			<div class="menu_title">
+				<i class="fas fa-envelope"></i>
+				<span>Message</span>
+			</div>
+		<div class="note_wrap">
+				<div class="conn_note">Please contact me if you are interested</div>				
+				<div class="send_info">
+					<div class="send_name">
+						<input type="text" class="send_input" placeholder="Name">
+					</div>
+					<div class="area"></div>
+					<div class="send_email">
+						<input type="text" class="send_input" placeholder="Email">
+					</div>
+				</div>
+				<div class="send_msg">
+					<input type="text" class="send_input" placeholder="Message">
+				</div>
+				<div class="send_btn">
+					<span class="err_msg">Please enter a value:/</span>
+					<a href="#"><i class="fas fa-rocket"></i>SEND MESSAGE</a>
+				</div>
+			</div>
+
+		</div>
+	</div><!--modal wrap-->
+
+	<div class="wrap">
+		<aside>
+			<div class="side_wrap">
+				<div class="common_panel layer">
+				   <div class="side_picture"></div>
+				   <div class="side_intro_group">
+					 <div class="name">Yeonseung NA(nys1129)</div>
+					 <div class="intro">
+						안녕하세요 반갑습니다. 
+						잘못해요 저는. 잘할수 있을까요?
+					</div>	
+				   </div>
+				   <div class="side_personal_group">
+				 	  <div class="side_personal">
+				 	  	   <div><i class="fas fa-briefcase"></i>Web Programmer</div>
+				 	  	   <div><i class="fas fa-graduation-cap"></i>Bachelor of Trade</div>
+				 	  	   <div><i class="fas fa-home"></i>Gwang-Ju, Korea rep</div>
+				 	  	   <div><i class="fas fa-envelope"></i>blackpulv@hanmail.net</div>
+				 	  	   <div><i class="fas fa-mobile"></i>010-3791-5216</div>
+
+				 	  </div>
+				   	  <div class="side_sns">
+				   	  	  <div class="middle">
+							 <a class="snsbtn" href="#">
+								<i class="fab fa-facebook-f"></i>
+							 </a>
+							 <a class="snsbtn" href="#">
+								<i class="fab fa-twitter"></i>
+							 </a>
+							 <a class="snsbtn" href="#">
+								<i class="fab fa-google"></i>
+							 </a>
+							 <a class="snsbtn" href="#">
+								<i class="fab fa-instagram"></i>
+							 </a>
+							 <a class="snsbtn" href="#">
+								<i class="fab fa-youtube"></i>
+							 </a>
+							
+						  </div>
+
+
+						</div>
+				   	  </div>
+				   </div>
+				   <div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   	<span><i class="fas fa-bars"></i>Menu</span>
+				   
+				   </div>
+				   		<ul>
+							<li><a href="#">Tech Skills</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">License</a></li>							
+						</ul>
+					</div>
+				<div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   	  <i class="fas fa-cloud"></i>
+				      <span>Downloads</span>
+				   
+				   </div>
+				   <div class="content_padding download_wrap">
+				   		<div class="git_wrap">
+				   			
+				   			<a href="https://github.com/NAYEONSEUNG" target="_blank">
+				   				<i class="fab fa-github"></i>Github
+				   			</a>
+				   		</div>
+				   		<div class="resume_wrap">
+				   			<a href="#">
+				   				<i class="fas fa-download"></i>Resume
+				   			</a>
+				   		</div>
+				   	
+				   </div>
+				   		
+				</div>									
+
+			   
+		</aside>
+		
+		<section>
+			<div class="content_wrap">
+			 <div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   	<span><i class="fas fa-laptop-code"></i>TechSkills</span>
+				   
+				   </div>
+				   <div class="content_padding">
+				   		<div class="bar_wrap">
+				   			<div class="skill_title"><strong>Programing(Java,Python)</strong></div>
+				   			<div><div class="bar_border"><div class="bar_fill" >50%</div></div></div>	
+				   		</div>		
+				   							   					
+				   				
+						<div class="bar_wrap">
+				   			<div class="skill_title"><strong>DataBase&SQL(Oracle, MongoDB)</strong></div>
+				   			<div><div class="bar_border"><div class="bar_fill" >60%</div></div></div>			
+				   		</div>		
+				   								   					
+				   								   					   							   		
+				   		<div class="bar_wrap">
+				   			<div class="skill_title"><strong>Web Publishing(HTML, CSS, Javascript)</strong></div>
+				   			<div><div class="bar_border"><div class="bar_fill" >55%</div></div></div>			
+				   		</div>		
+				   									   									   				
+				   				   							   		
+				   		<div class="bar_wrap">
+				   			<div class="skill_title"><strong>Web Develop(Servlet, Spring)</strong></div>
+				   			<div><div class="bar_border"><div class="bar_fill" >60%</div></div></div>				
+				   		</div>		
+				   							   					
+				   								   					   							   		
+				   		<div class="bar_wrap">
+				   			<div class="skill_title"><strong>Version Managing Tool(GitHub)</strong></div>
+				   			<div><div class="bar_border"><div class="bar_fill" >70%</div></div></div>			
+				   		</div>		
+				   						   					
+				   								   							   							   		
+				   </div>	
+			 </div> 
+
+			 <div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   		<i class="fas fa-user-edit"></i>
+				   		<span>Education</span>				   
+				   </div>
+				   <div class="content_padding">
+				   		<table class="edu_table">
+				   			<thead>
+				   				<tr><th>No</th><th>Course name</th><th>Academy</th><th>period</th></tr>
+				   			</thead>
+				   			<tbody>
+				   				<tr><td>1</td><td>프로그래밍 언어활용</td><td>한국경영원</td><td>2019.11~2020.06</td></tr>
+				   				<tr><td>2</td><td>응용SW기초기술 활용</td><td>한국경영원</td><td>2019.11~2020.06</td></tr>
+				   				<tr><td>3</td><td>데이터베이스 활용  </td><td>한국경영원</td><td>2019.11~2020.06</td></tr>
+				   				<tr><td>4</td><td>서버프로그램 구현</td><td>한국경영원</td><td>2019.11~2020.06</td></tr>
+				   				<tr><td>5</td><td>UI 구현</td><td>한국경영원</td><td>2019.11~2020.06</td></tr>
+				   				<tr><td>6</td><td>사회복지 2급교육</td><td>한국예술종합교육원</td><td>201506</td></tr>
+
+				   			</tbody>
+				   		</table>
+
+				   </div>
+				   		
+			 </div>	
+
+			 			 <div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   		<i class="fas fa-address-card"></i>
+				   		<span>License</span>				   
+				   </div>
+				   <div class="content_padding">
+				   		<table class="edu_table">
+				   			<thead>
+				   				<tr><th>No</th><th>License name</th><th>Institution</th><th>period</th></tr>
+				   			</thead>
+				   			<tbody>
+				   				<tr><td>1</td><td>1종보통 운전면허증</td><td>도로교통공단</td><td>20</td></tr>
+				   				<tr><td>2</td><td>사회복지사2급</td><td>보건복지부</td><td>2015.10</td></tr>
+				   				
+
+				   			</tbody>
+				   		</table>
+
+				   </div>
+				   		
+			 </div>
+
+	<!-- 		    <div class="common_panel layer nav">
+				   	<div class="menu_title">
+				   	<i class="fas fa-cloud"></i>
+				   	<span>Downloads</span>
+				   
+				   </div>
+				   <div class="content_padding">
+				   		<div>
+				   			<i class="fab fa-github"></i>
+				   			<span></span>
+				   		</div>
+				   		<div></div>
+				   	
+				   </div>
+				   		
+				</div>	 -->	
+
+			</div>			
+		</section>
+
+	</div>
+</body> <!--바디태그안에는 html 코드만쓰지// 헤드태그안에는 style css만 쓰자.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+/*자바스크립트, 제이쿼리, 에이젝스코드는 여기다가 쓰자*/
+	
+	/*$ = jQuery*/
+	//HTML 문서가 완료되면 동작 할 작업들
+	//Javascript에서는 함수를 만들떄 function(){}
+	//이름이 없는 함수 = 익명함수
+	$(document).ready(function() {
+		// $('.code').animate({width: '70%'},'slow');
+		// $('.db').animate({width: '60%'},'slow');
+		// $('.design').animate({width: '55%'},'slow');
+		// $('.spring').animate({width: '60%'},'slow');
+		// $('.git').animate({width: '70%'},'slow');
+
+		// 괄호안에오는건 무조건 선택자(누구한테 줄것인가) /each -자바에서 foreach
+		//this가 붙으면 나 자신, 첫번째 bar fill에가서 텍스트값을 가져와라
+		//withval은 변수 int, string등등 구별없이 무조건 var쓴다. 
+		//1000을 1초로 본다. 10초면은 10000
+		$('.bar_wrap').find('.bar_fill').each(function(){ 
+			var widthval = $(this).text();
+			$(this).animate({width: widthval}, '1000');
+		});
+
+	});
+	//달라표시는 제이쿼리  영어로 jquery라고 써도 작동 한다.
+	//document는 문서 / 문서전체에서 클래스가 센드인풋인 놈을 찾아서
+	//그놈이 블러를 해을때 펑션이니까 그 아래를 실행해라 
+	// '' "" 문자열에 뭘쓰든 괜찮다.
+
+	// var inputVal = document.getElementsByClass('send_input').val; 제이쿼리 안쓰면 이렇게 복잡하게 쓴다. 위랑 같은 말임.
+		// console.log('값: ' + inputVal);
+		//(값 + type)=== 동등비교 (값 + type)타입까지 비교를 해줌 , (값)==(값)
+	$(document).on('blur', '.send_input', function(){
+		var inputVal = $(this).val();
+		//input blur시 유효성체크 (테두리 및 경고메시지 출력)		
+		if(inputVal == ''){
+			$('.err_msg').css('visibility', 'visible');
+			$(this).parent().css('border', '1px solid #dd4b4f');
+		}else{
+			$('.err_msg').css('visibility', 'hidden');
+			$(this).parent().css('border', '1px solid #2f3138');
+		}
+
+		//input값을 모두 비교하여 값이있으면 버튼색상 변경
+
+		//클래스가 노트랩인걸 찾아서 클래스가 샌드인풋인 놈들만 찾아라
+		//3개를 찾았으면 반복을 세번 돌아라
+		var code = 0;
+		$('.note_wrap').find('.send_input').each(function(){
+			if($(this).val() == ''){
+				return false; //반복문 종료(break)
+			}else{
+			   code += 1;
+			}
+		});
+
+		if(code == 3){
+			$('.send_btn > a').css('background-color', '#414d41')
+							  .css('color', 'white');
+		}else{
+			$('.send_btn > a').css('background-color', 'white')
+							  .css('color', '#414d41');
+		}
+
+	});
+	$(document).on('click', '.conn_btn', function(){
+		$('.modal_wrap').css('display', 'block');
+		$(this).css('display', 'none')
+	});
+	$(document).on('click', '.close_btn', function(){
+		$('.modal_wrap').css('display', 'none');
+		$('.conn_btn').css('display','flex');
+	});
+</script>
+</html>
