@@ -3,14 +3,27 @@
 <head>
 	<title>비번고고</title>
 	<style type="text/css">
+		body, input{
+			font-size: 12px;
+			font-family: '돋움',dotum,sans-serif;
+			line-height: 1.5;
+			color: #333;
+		}
+		em{
+			font-style: normal;
+			font-weight: normal;
+		}
 		#daumContent{
 			width: 978px;
 			overflow: hidden;
 			margin: 0 auto;
-			border: 1px solid red;
 		}
-		#mArticle{
-			/*min-height: 574px;*/
+		.intro_out .cont_intro{
+			padding-top: 53px;
+		}
+		.myinfo_intro .cont_intro{
+			float: left;
+			/*padding-top: 37px;*/
 		}
 		.myinfo_intro{
 			width: 100%;
@@ -18,75 +31,170 @@
 			height: 147px;
 		}
 		.intro_out .bg_intro{
-			width: 126px;
+			width: 130px;
 			background-position: -160px -600px;
 		}
 		.myinfo_intro .bg_intro{
-			float: left;
+			float:left;
 			width: 154px;
 			height: 147px;
 		}
-		.intro_out .cont_intro{
-			padding-top: 54px;
-		}
-		.myinfo_intro .cont_intro{
-			float:left;
-			padding-top: 37px;
-		}
-		.intro_out .tit_outpw{
-			width: 501px;
-			margin-top: -16px;
-			background-position: 0 -1665px;
+		.intro_out .tit_outagree{
+			width: 620px;
+			background-position: 0 -1565px;
 		}
 		.myinfo_intro .tit_comm{
-			height: 26px;
-			margin-bottom: 14px;
+			height: 34px;
+			margin-bottom: 28px;
 		}
 		.tit_comm{
 			display: block;
 			overflow: hidden;
+			background:url(../../img/비번확인.png);
+			text-indent: -9999px;
 		}
-		.myinfo_intro, .cont_intro, .desc_g{
-			color: #57595c;
-			font-size: 13px;
-			line-height: 22px;
-			background-color: #fff;
-		}
-		fieldset, img{
-			border:0 none;
-		}
-		.fld_comm .info_comm{
-			position: relative;
-			padding: 35px 42px 19px;
+		.info_agree{
+			padding: 42px 50px 29px;
+			overflow: hidden;
 			border-top: 1px solid #e1e1e1;
 			border-bottom: 1px solid #e1e1e1;
 			background-color: #fbfbfb;
 		}
-		.info_comm .info_daumid{
-			margin-top: 5px;
-			margin-bottom: 24px;
-		}
-		.info_comm .info_detail{
-			display: block;
-			clear: both;
-			width: 100%
-			margin-bottom: 19px;
-			overflow: visible;
-			zoom:1;
-		}
-		.info_detail .tit_space{
-			padding-top: 0;
-		}
-		.info_detail .tit_detail{
-			float:left;
-			width: 107px;
+		.info_agree .info_user{
+			position: relative;
+			width: 793px;
+			margin-bottom: 20px;
+			padding: 27px 37px 40px 45px;
 			overflow: hidden;
-			padding: 12px 0 05px;
+			border: 1px solid #dfdfdf;
+			background-color: #fff;
+			color: #444;
 		}
-		.info_detail .txt_id{
-			width: 37px;
-			height: 14px;
-			background-position: -41px -460px;
+
+		.btn_type{
+			width: auto;
+			margin:0px 5px;
+			font-size: 17px;
+			font-weight: 600;
+			line-height: 61px;
+			/*display: block;*/
+			box-sizing: border-box;
+			height: 61px;
+			padding: 16px 16px;
+			text-align: center;
+			text-decoration: none;
+		}
+		.btn_default{
+			color: #333;
+			border: 1px solid #e7e7e7;
+			background-color: #fff;
+		}
+		.btn_agree{
+			color: #fff;
+			border: 1px solid #e9b616;
+			background-color: #e9b616;
+		}
+		.join_title{
+			margin: 18px;
+			font-size: 14px;
+			font-weight: 700;
+			color: black;
+		}
+		.ps_box{
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 30%;
+			height: 9px;
+			border: 1px solid #dadada;
+			padding: 10px 14px 10px 14px;
+			background: #fff;
+			vertical-align: top;
+
+		}
+		.int{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 21px;
+			padding-right: 25px;
+			line-height: 29px;
+			border: none;
+			background: #fff;
+			font-size: 15px;
+			z-index: 10;
+		}
+		.wrap_btn{
+			width: : 100%;
+			padding: 23px 0 70px;
+			overflow: hidden;
+			text-align: center;
+		}
+		.wrap_btn .btn_default{
+			width: 93px;
+			height: 46px;
+			margin-right: 2px;
+			background-position: -100px -360px;
+		}
+		.wrap_btn .btn_agree{
+			width: 97px;
+			height: 46px;
+
+		}
+
+		.idpw{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.join_title{
+			margin: 18px;
+			font-size: 14px;
+			font-weight: 700;
+			color: black;
+		}
+		#footer{
+			padding: 15px 0;/*상하 (두개일떄는)*/
+		}
+		#footer > ul{ 
+			margin: 0 auto 9px;
+			text-align: center;
+
+		}
+		#footer * {
+			font-size: 11px;
+			line-height: normal;
+			list-style: none;
+			color: #333;
+		}
+		#footer > ul > li{
+			display: inline;/*인라인:사이즈 조절은 안하는데 내 옆으로 다 붙어라*/
+			padding: 0 5px 0 7px;
+			border-left: 1px solid #dadada;
+		}
+		#footer > ul > li a:hover{
+			color: #e9b616;
+			text-decoration: underline;
+		}
+		#footer ul li:first-child{/* first-child: 첫번째 자식만*/
+			border-left: 0px!important;/* ! 느낌표 찍으면 가장 높은 레벨이니까 이놈만 먹음*/
+		}
+		#addr_logo{
+			width: 63px;
+			height: 11px;
+		}
+		#address{
+			margin:0 auto;
+			text-align: center;
+		}
+		#address * {
+			font: 9px verdana;
+		}
+		#address a{
+			font-weight: bold;
+		}
+		#address a: hover{
+			color: #e9b616;
 		}
 
 
@@ -94,36 +202,87 @@
 </head>
 <body>
 	<div id="daumContent" role="main">
-		<div id="cMain">
-			<div id="mArticle">
-				<div class="myinfo_intro intro_out">
-					<span class="bg_intro"></span>
-					
-				</div>
-				<div class="cont_intro">
-					<h3 class="tit_comm tit_outpw">안전한 회원탈퇴를 위해, 비밀번호를 확인해주세요</h3>
-					<p class="desc_g">
-						비밀번호 확인 후 아이디는 죽시 탈퇴됩니다.
-						<br>
-						탈퇴 후에는 동일 아이디로 다시 가입할 수 없으며 아이디와 데이터는 복구할 수 없으니 신중하게 선택해 주세요.
-					</p>					
-				</div>				
+		<div class="myinfo_intro intro_out">
+			<span class="bg_intro"></span>
+			<div class="cont_intro">
+				<h3 class="tit_comm tit_outagree">회원탈퇴에 앞서 유의사항 및 안내를 반드시 읽고 진행해 주세요!</h3>				
 			</div>
-			<form action="frm_repw" action="" method="post">
-				<div class="info_comm">
-					<div class="info_detail info_daumid">
-						<div class="tit_detail tit_space">
-							<strong class="txt_comm txt_id">아이디</strong>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-			</form>
 		</div>
-		
-	</div>
+
+		<form action="frm_withdrawal" action="" method="post">
+			<div class="info_agree">
+				<div class="info_user">
+					<span class="ul_li_span">
+						<strong class="tit_agree">비밀번호 확인 후 아이디는 즉시 탈퇴됩니다.
+						</strong>
+						
+							<span class="txt_agree">
+								탈퇴 후에는 동일 아이디로 다시 가입할 수 없으며 아이디와 데이터는 복구할 수 없으니 신중하게 선택해 주세요.
+								<em class="emph_g"></em>
+												
+							</span>
+						</label>
+					</span>
+
+
+				</div>
+
+				<div class="idpw">
+					<h3 class="join_title">
+						<label for="id">아이디</label>								
+					</h3>
+						<span class="ps_box int_id">
+							<input type="text" id="id" name="id" class="int">
+							 <span class="step_url"></span>
+						</span>
+
+					<h3 class="join_title">
+						<label for="pswd1">비밀번호</label>
+									
+					</h3>
+						<span class="ps_box int_pass">
+							<input type="password" id="pswd1" name="pswd1" class="int">
+							<span class="step_url"><span class="pw_lock"></span></span>
+						</span>	
+			   </div>
+
+	
+				</div>								
+			</div>
+						<div class="wrap_btn">
+				<div class="btn_double_area">
+					
+						
+					<span><a href="../include/header2.html" class="btn_type btn_default">뒤로가기</a></span>
+					<span><a href="../include/yellow_join.html" class="btn_type btn_agree">탈퇴하기</a></span>
+						
+				</div>
+			</div>
+        </form>	
+
+ 	<footer>
+				<div id="footer">
+					<ul>
+						<li><a href="#">이용약관</a></li>
+						<li><strong><a href="#">개인정보처리방침</a></strong></li>
+						<li><a href="#">책임의 한계와 법적고지</a></li>
+						<li><a href="#">회원정보 고객센터</a></li>
+					</ul>
+				
+					<div id="address">
+						<span>
+							<a href="../include/header2.html">
+							<img id="addr_logo" src="../../img/small-레알본옐로_1.png">
+							</a>
+						</span>
+						<span>Copyright</span>
+						<span>@</span>
+						<span><strong><a href="#">YELLOW Corp.</a></strong></span>
+						<span>All Rights Reserved.</span>
+					
+					</div>
+
+				</div>
+	</footer>      
 </body>
 </html>

@@ -116,11 +116,57 @@
 			display: inline-block;
 			background-position: -27px 0;
 		}
+		.join_content{
+			width: 460px;
+			margin: 0 auto;			
+		}
+		.btn_type{
+			width: auto;
+			margin:0px 5px;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 61px;
+			display: block;
+			box-sizing: border-box;
+			height: 61px;
+			padding-top: 1px;
+			text-align: center;
+		}
+		.btn_default{
+			color: #333;
+			border: 1px solid #e7e7e7;
+			background-color: #fff;
+		}
+		.btn_agree{
+			color: #fff;
+			border: 1px solid #e9b616;
+			background-color: #e9b616;
+		}
+		.title h1{
+			display: block;
+			clear: both;
+			margin: 0 0 10px;
+			font-size: 35px;
+			text-align: center;
+			font-weight: 400;
+			color: #333;
+			letter-spacing: -0.03em;
+		}
 	</style>
 </head>
 <body>
-	
-	<div class="row_group">
+		<header>
+			<div class="title">
+			 <h1>아이디와 비밀번호를 확인해주세요</h1>
+			 <span></span>
+			<div id="header_div">
+				
+		    </div>
+			</div>
+		</header>
+
+			<div class="join_content">
+				<div class="row_group">
 							<div class="join_row">
 							<h3 class="join_title">
 								<label for="id">아이디</label>
@@ -143,19 +189,14 @@
 							</span>
 							<span class="error_next_box">필수 정보입니다.</span>
 						</div>
-
-						<div class="join_row">
-							<h3 class="join_title">
-								<label for="pswd2">비밀번호 재확인</label>								
-							</h3>
-							<span class="ps_box int_pass">
-								<input type="password" id="pswd2" name="pswd2" class="int">
-								<span class="step_url"><span class="repw_lock"></span></span>
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>
-
+						
 					</div>
+
+					<div class="btn_double_area">
+						<span><a href="../include/header2.html" class="btn_type btn_default">취소</a></span>
+						<span><a href="../include/yellow_join.html" class="btn_type btn_agree">확인</a></span>						
+					</div>
+			</div>
 
 </body>
 </html>
