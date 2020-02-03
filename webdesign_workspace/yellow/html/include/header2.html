@@ -215,6 +215,19 @@
 			padding:7px 0px 6px 0px;
 		}
 		a#btn_login{
+			display: block;
+			background-color: #747474;
+			color: white;
+			font-size: 22px;
+			width: 408px;
+			height: 59px;
+			text-align: center;글자 가운데 정렬
+			padding-top: 2px;
+			line-height: 61px;
+			text-decoration: none;
+			margin: 30px 0px 13px 0px;
+		}
+		.btn_type{
 			display: block;/*사이즈 줄수있는데 가로 다 내꺼*/
 			background-color: #747474;
 			color: white;
@@ -227,6 +240,7 @@
 			text-decoration: none;
 			margin: 30px 0px 13px 0px;/*시계방향으로 상우하좌*/
 		}
+
 		table{
 			width: 100%;
 		}
@@ -249,7 +263,7 @@
 			/*visibility: hidden;*/
 			position: absolute;
 			right: 1px;
-			width: 344px;
+			width: 331px;
 			height: 22px;
 			margin-top: 1px;
 		}
@@ -328,7 +342,7 @@
 			border-left: 1px solid #dadada;
 		}
 		#footer > ul > li a:hover{
-			color: #1fbc02;
+			color: #FCBE32;
 			text-decoration: underline;
 		}
 		#footer ul li:first-child{/* first-child: 첫번째 자식만*/
@@ -349,7 +363,7 @@
 			font-weight: bold;
 		}
 		#address a: hover{
-			color: #1fbc02;
+			color: #FCBE32;
 		}
 		.title h1{
 			display: block;
@@ -448,21 +462,23 @@
 			<form class=frm_login>
 			<div class="div_input" id="naver_id">
 				<span class="input_box">
-					<input type="text" placeholder="아이디" id="login_id" class="input_login" >
+					<input type="text" placeholder="아이디" id="login_id" class="input_login" required>
 					
 				</span>
 			</div>
 			<div class="div_input" id="naver_pw">
 				<span class="input_box">
-					<input type="password" placeholder="비밀번호" id="login_pw" class="input_login" >
+					<input type="password" placeholder="비밀번호" id="login_pw" class="input_login" required minlength="6" maxlength="18">
 					<span class="pw_eye"><i class="fas fa-eye-slash"></i></span>
 				</span>
 				
 			</div>
-			</form>
+			
 			<div>
-				<a id="btn_login" href="#">로그인</a>
+				<!-- <a id="btn_login" href="#">로그인</a> -->
+				<button type="submit" class="btn_type">로그인</button> <!--앵커태그 버튼으로 바꾸기-->
 			</div>
+			</form>
 			<div>
 				<table>
 					<tr>
@@ -641,7 +657,8 @@
 							   <li><a href="#">구매내역</a></li>
 						       <li><a href="#">위시리스트</a></li>
 							   <li><a href="#">회원정보수정</a></li>
-							   <li><a href="#">고객센터</a></li>							
+							   <li><a href="#">고객센터</a></li>
+							   <li><a href="#">탈퇴하기</a></li>							
 						    </ul>
 						  </div>
 						</div>

@@ -295,7 +295,6 @@
 			justify-content: center;
 		}
 		.modal_wrap{
-				.modal_wrap{
 			position: fixed;
 			z-index: 1000;
 			background-color: rgba(0,0,0,0.4);
@@ -305,140 +304,53 @@
 			display: flex;/* 이줄포함 밑 두줄 모달창 가운데로 오게 해준다.*/
 			justify-content: center;
 			align-items: center;
-			display: none;
+			
 		}
 		.modal_content{
 			position: relative;
-			width: 500px;
-			height: 714.72px;
+			width: 400px;
+			height: 280.72px;
 			background-color: white;
 			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),
-				0 4px 20px 0 rgba(0,0,0,0.19);
-				border-radius: 2px;
-				overflow: hidden;
-				padding: 28px 0;
+						0 4px 20px 0 rgba(0,0,0,0.19);
+			border-radius: 2px;
+			overflow: hidden;
+			padding: 28px 0;
 		}
-		div#content_layout{
-			width: 414px;
-			margin: 0 auto;
-		}
-		div#header_div{
-			width: 240px;
-			margin: 62px auto;
-		}
-		div.div_input{
-			background-color: white;
-			border: 1px solid #badada;
-			width: 408px;
-			height: 46px;
-			margin-bottom: 14px;
-			padding: 10px 35px 10px 15px;
-			position: relative;
-		}
-		span.input_box{
+		.title h1{
 			display: block;
-			overflow: hidden; /*사이즈를 정해놓고 그 이상 넘어버리면 숨기는것*/
-		}
-		input.input_login{
-			border-width: 0px;
-			width: 356px;
-			padding:7px 0px 6px 0px;
-		}
-		a#btn_login{
-			display: block;/*사이즈 줄수있는데 가로 다 내꺼*/
-			background-color: #747474;
-			color: white;
-			font-size: 22px;
-			width: 408px;
-			height: 59px;
-			text-align: center;/*글자 가운데 정렬*/
-			padding-top: 2px;/*안쪽여백 윗쪽*/
-			line-height: 61px;/*글자가 가운데 정렬된다.//heigt랑 같은값을 주면됨 (패딩 탑2 가 있어서 2를 더해서 준다.)*/
-			text-decoration: none;
-			margin: 30px 0px 13px 0px;/*시계방향으로 상우하좌*/
-		}
-		table{
-			width: 100%;
-		}
-		#state{
-			font-size: 13px;
-			position: relative;
-		}
-		td{
-			height: 26px;
-		}
-		#state > label{
-			background:url('../Img/NAVER/check_off.gif') no-repeat;
-			display: block;
-			height: 26px;
-			line-height: 26px;
-			padding-left: 30px;
-
-		}
-		#state > input{
-			/*visibility: hidden;*/
-			position: absolute;
-			right: 1px;
-			width: 344px;
-			height: 22px;
-			margin-top: 1px;
-		}
-
-		#state > input:checked + label{
-			background-image: url('../Img/NAVER/check_on.gif');
-		}
-
-		#secure{
-			text-align: right;
-			font-size: 12px;
-		}
-
-		#ip_ud{
-			color: #747474;
-		}
-		/*#ip_ud:hover{
-			text-decoration: none;
-		}*/
-		#off{
-			display: inline-block;
-			font-weight: bold;
-			width: 22px;
-			text-align: left;
-			color: #747474;
-			cursor:pointer;
-		}
-		.si{
-			color: #d5d5d5;
-		}
-		#login_ud > a{
-			text-decoration: underline;
-			color: #747474;
-		}
-		#secure img{
-			/*수직정렬
-			: display가 inline 또는 inline-block일 때만 사용 가능
-			: baseline, sub, super, middle, top, bottom 등*/
-			vertical-align: bottom;
-
-		}
-		hr{
-			width: 98%;
-			margin: 20px auto;
-			border: thin solid #eaeaea;
-		}
-		div#member{
-			color: #8c8c8c;
-			font-size: 12px;
+			clear: both;
+			margin: 0 0 10px;
+			font-size: 35px;
 			text-align: center;
+			font-weight: 400;
+			color: #333;
+			letter-spacing: -0.03em;
 		}
-		
-		
-
 
 
 	</style>
 </head>
 <body>
+
+
+	<div class="modal_wrap">
+		<div class="modal_content">
+			<div class="login_close">
+				<button><i class="fas fa-times"></i></button>
+			</div>
+			<div id="content_layout">
+				<div class="title">
+			    	<h1>탈퇴하시겠습니까?</h1>
+			    
+			    <div id="header_div">					    		
+			   	</div>			   
+		    </div>		
+	    </div>
+    </div>
+
+
+
 
 
 
