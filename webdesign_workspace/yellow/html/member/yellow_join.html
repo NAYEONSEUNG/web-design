@@ -259,15 +259,15 @@
 								<input type="text" id="upw" name="upw" class="int">
 								<span class="step_url"><span class="pw_lock"></span></span>
 							</span>
-							<!-- <span class="join_err_msg">필수 정보입니다.</span> -->
+							<span class="join_err_msg">필수 정보입니다.</span>
 						</div>
 
 						<div class="join_row">
 							<h3 class="join_title">
 								<label for="pswd2">비밀번호 재확인</label>								
 							</h3>
-							<span class="ps_box int_pass join_info_box_content">
-								<input type="text" id="urpw" name="urpw" class="int">
+							<span class="ps_box int_pass">
+								<input type="password" id="urpw" name="urpw" class="int">
 								<span class="step_url"><span class="repw_lock"></span></span>
 							</span>
 							<span class="join_err_msg">필수 정보입니다.</span>
@@ -279,7 +279,7 @@
 							<h3 class="join_title">
 								<label for="name">이름</label>								
 							</h3>
-							<span class="ps_box join_info_box_content">
+							<span class="ps_box">
 								<input type="text" id="uname" name="uname" class="int">								
 							</span>
 							<span class="join_err_msg">필수 정보입니다.</span>
@@ -343,7 +343,7 @@
 							<h3 class="join_title">
 								<label for="email">본인 확인 이메일<span class="choice">(선택)</span></label>								
 							</h3>
-							<span class="ps_box join_info_box_content">
+							<span class="ps_box">
 								<input type="text" id="uemail" name="uemail" class="int" placeholder="본인확인 이메일">
 
 							</span>
@@ -354,54 +354,31 @@
 							<h3 class="join_title">
 								<label for="phone">휴대전화</label>								
 							</h3>
-							<span class="ps_box join_info_box_content">
+							<span class="ps_box">
 								<input type="text" id="uphone" name="uphone" class="int" placeholder="-없이 입력, 예)01012345678">								
 							</span>
 							<span class="join_err_msg">필수 정보입니다.</span>
 						</div>
-<!-- 
-						<div class="join_row">
-							<h3 class="join_title">
-								<label for="add">주소입력</label>								
-							</h3>
-							<span>
-								<div>
-									<div class="addr_num join_info_box_content">
-										<input class="daum_addr addr_only" type="text" id="sample6_postcode" placeholder="우편번호" readonly>
-									</div>
-									<div class="addr_search join_info_box_content">
-										<input class="daum_addr" type="button" id="btn_post" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-									</div>	
-										<input class="daum_addr addr_only" type="text" id="sample6_address" placeholder="주소" readonly><br>
-										<input class="daum_addr" type="text" id="sample6_detailAddress" placeholder="상세주소">
-													
-								</div>
-							</span>
-							<span class="join_err_msg">필수 정보입니다.</span>
-						</div> -->
 
-						<div class="join_row">
+							<div class="join_row">
 							<h3 class="join_title">
-								<label for="uaddr">주소<span class="highlight"></span></label>
+								<label for="phone">주소입력</label>								
 							</h3>
-							<div class="addr_wrap">
-								 <div class="postcode" style="display: flex;">
-								    <span class="join_info_box_content ps_box addr_poc">
-								    <input type="text" id="sample6_postcode" class="int addr_only" placeholder="우편번호"  readonly>
-								    </span>
-								     <input type="button" id='btn_post' class='addr_poc_button' onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+							<div>
+								<div class="addr_num">
+									<input class="daum_addr" type="text" id="sample6_postcode" placeholder="우편번호">
 								</div>
-								   <span class="join_info_box_content ps_box">
-										<input type="text" id="sample6_address" class="int addr_only" placeholder="주소" readonly><br>
-								   </span>
-								   <span class="join_info_box_content ps_box">
-										<input type="text" id="sample6_detailAddress" class="int" placeholder="상세주소">
-								   </span>
+								<div class="addr_search">
+									<input class="daum_addr" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+								</div>	
+									<input class="daum_addr" type="text" id="sample6_address" placeholder="주소"><br>
+									<input class="daum_addr" type="text" id="sample6_detailAddress" placeholder="상세주소">
+							<!-- 		<input class="daum_addr" type="text" id="sample6_extraAddress" placeholder="참고항목">	 -->					
 							</div>
-						<span class="join_err_msg">필수 정보입니다.</span>
+							<span class="join_err_msg">필수 정보입니다.</span>
 						</div>
 							
-				
+					</div>
 
 						<div class="btn_double_area">
 							<span><a href="#" class="btn_type btn_agree">가입하기</a></span>
@@ -450,8 +427,7 @@
    });
 
 	$(function(){
-		//비밀번호가 유효한 값인지 체크해주는 Flag값
-		var pwFlag = false;
+
 
 
 		//id유효성체크:	
@@ -468,125 +444,32 @@
 		});
 		//비밀번호 유효성 체크
 		$('#upw').keyup(function(){
-			//1. 사용자가 입력한 값 받기
-			var pw = $.trim($('#upw').val());
-			var rpw = $.trim($('#urpw').val());
-			// alert(pw+','+rpw);
+			var pw = $.trim($(this).val());
+			var result = joinValidate.checkPw(pw);
 
-			//2.유효성 체크하기
-			var result = joinValidate.checkPw(pw, rpw); //유효성체크는 joinValidate.checkPw여기서만 한다.
-			if(result.code == 0 || result.code == 10 || result.code == 6){
-				pwFlag = true;
-			}else{
-				pwFlag=false
-			}
-			if(result.code == 10){
-				$('.join_info_box_content:eq(2)').css('border', '2px solid #3885ca');				
-			}else if(result.code == 6){
-				$('.join_info_box_content:eq(2)').css('border', '2px solid #3885ca');				
-			}
-
-			//3. 체크 결과에 따라 디자인하기
 			ckDesign(result.code, result.desc, 1, 1);
 		});	
-
-		//비밀번호 재확인 유효성 체크
-		$('#urpw').keyup(function(){
-			var pw = $.trim($('#upw').val());
-			var rpw = $.trim($('#urpw').val());
-			// console.log(pw+', '+rpw);
-
-			var result = joinValidate.checkRpw(pw, rpw, pwFlag);
-			// console.log(pw+', '+rpw);
-			// alert(result.code+', '+ result.desc);
-			if(result.code == 10){
-				$('.join_info_box_content:eq(1)').css('border', '2px solid #3885ca');				
-			}else if(result.code==6){
-				$('.join_info_box_content:eq(1)').css('border', '2px solid #3885ca');				
-			}
-
-			ckDesign(result.code, result.desc, 2, 1);
-		});
-
-		//이름 유효성체크
-		$('#uname').keyup(function(){
-			var name = $.trim($(this).val());
-			// console.log(name);
-			var result = joinValidate.checkName(name);
-			ckDesign(result.code, result.desc, 3, 2);
-		});
-
-		//전화번호 유효성체크
-		$('#uphone').keyup(function(){
-			var phone = $.trim($(this).val());
-			var result = joinValidate.checkPhone(phone);
-			console.log(result.code+', '+ result.desc);
-			ckDesign(result.code, result.desc, 5, 6);
-		});
-
-		//이메일 유효성 체크
-		$('#uemail').keyup(function(){
-			var email = $.trim($(this).val());
-			var result = joinValidate.checkEmail(email);
-			ckDesign(result.code, result.desc, 4, 5);
-		});
-
-		$('.addr_only').click(function(){//우편번호 버튼에다가 btn_post id로 주기
-			//사용자가 우편번호 또는 주소 input을 클릭했을 때!
-			$('#btn_post').click();
-		});
-		//상세주소를 클릭하면
-		$('#sample6_detailAddress').click(function(){
-			var addrPost = $('#sample6_postcode').val();
-			if(addrPost == '' || addrPost.length == 0){
-				// $('#btn_post').click();
-			}
-		});
-
-		//주소 유효성체크
-		$('#sample6_detailAddress').keyup(function(){
-			var addrDetail = $.trim($(this).val());
-			var addrPost = $('#sample6_postcode').val();
-			// console.log('우편번호: '+addrPost+',상세주소: '+addrDetail);
-
-			var result = joinValidate.checkAddr(addrDetail, addrPost);
-
-			if(result.code == 3){//우편번호와 주소 없는경우
-				ckDesign(result.code, result.desc, 8, 7);
-				ckDesign(result.code, result.desc, 9, 7);
-			}else if(result.code == 0){//성공
-				ckDesign(result.code, result.desc, 9, 7);
-				ckDesign(result.code, result.desc, 8, 7);
-				ckDesign(result.code, result.desc, 10, 7);
-			}else{
-				ckDesign(result.code, result.desc, 10, 7);
-			}
-		});
-
 	});
 
-			function ckDesign(code, desc, line, msg){//
-				if(code == 0 || code == 10 ){//통과O
-					//테두리 색상변ㅇ경
-					$('.join_info_box_content:eq('+line+')').css('border', '2px solid #3885ca');//예) line이 2번
-					//에러메시지출력
-					$('.join_err_msg:eq('+msg+')').css('visibility', 'visible')//예) msg 1번
-										    .text(desc)
-										    .css('color','#3885ca');
-					return true;
-
-				}else{//0이면, 통과 O 
-					//테두리색상변경
+			function ckDesign(code, desc, line, msg){
+				if(code != 0){//0이아니면, 통과 x
 					$('.join_info_box_content:eq('+line+')').css('border', '2px solid #d95339');
-					//에러메시지 
 					$('.join_err_msg:eq('+msg+')').css('visibility', 'visible')
 										    .text(desc)
 										    .css('color','#d95339');
-				   return false;
+					return false;
+
+				}else{//0이면, 통과 O 
+					//테두리색상변경
+					$('.join_info_box_content:eq('+line+')').css('border', '2px solid #3885ca');
+					//에러메시지 
+					$('.join_err_msg:eq('+msg+')').css('visibility', 'visible')
+										    .text(desc)
+										    .css('color','#3885ca');
+				   return true;
 
 				}
 		   }
-
 
 
 </script>
